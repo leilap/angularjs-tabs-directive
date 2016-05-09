@@ -1,0 +1,19 @@
+﻿<div class="responsive-tabs">
+    <div class="desktop">
+        <ul>
+            <li ng-repeat="tab in tabs" class="tab">
+                <a ng-click="toggle(tab, $index)" ng-class="{'active':!tab.state}">{{tab.title}}</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <div ng-repeat="tab in tabs">
+            <div class="mobile">
+                <a ng-click="toggle(tab, $index)" ng-class="{'active':!tab.state}">{{tab.title}}</a>
+            </div>
+            <div ng-class="{'off':tab.state}" class="tabs-content">
+                <p><span class="inline-title">{{tab.title}}</span> {{tab.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
